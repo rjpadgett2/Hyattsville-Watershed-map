@@ -32,18 +32,15 @@
     	L.tileLayer(
   			'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    			attribution: 'Data © <a href="http://osm.org/copyright">OpenStreetMap</a>',
-   			maxZoom: 14, minZoom: 14
+
   			}).addTo(map);
 
 
   		L.geoJSON(hyattGeo).addTo(map);
 
-  		var floodImage = "flood.png",
-  			//floodBound = [[38.9962, -76.8810][38.9301, -77.0214]];[38.9974, -76.885][38.9376, -77.0079]
-  			floodBound = [center, [38.93, -77.0079]];
 
-  		L.imageOverlay(floodImage, floodBound).addTo(map);
 		
+
 	 </script>
 	 </p>
 </body>
