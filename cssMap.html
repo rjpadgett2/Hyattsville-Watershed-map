@@ -14,12 +14,14 @@
 			transform: translate(-50%, -50%);
 		}
 		#radio{
-
+			position: absolute;
+			margin: 50px;
+			border: 1px solid black;
+			padding: 15px;
+			border-radius: 8px;
+			background-color: white;
 		}
 
-		#zoom {
-			margin-top: 15px;
-		}
 	</style>	
 
 </head>
@@ -32,10 +34,11 @@
 
 	var zoom = document.getElementById('zoom');
 	var map = document.getElementById('map');
+	var mapLink = document.getElementById('mapLink');
 
-	zoom.onclick = function(){zoomIn(target);};
+	/*zoom.onclick = function(){zoomIn(target);};
 
-	function zoomIn(target){
+	/*function zoomIn(target){
 		console.log("zoomIn");
 		zoom.value = '-';
 		map.width = 500;
@@ -47,8 +50,13 @@
 		zoom.value = '-';
 		map.width = 100;
 		button.onclick = function() {zoomIn(target);};
-	}
+	}*/
 
+	function changeSRC(mapName){
+		if (mapName == "flood") {
+			this.src = 'flood.png'
+		}
+	}
 
 	/*	$("#zoom").on('click', function(){
 			if (document.getElementById('zoom') == '+'){
@@ -60,13 +68,18 @@
 
 	<div id = "map"> 
 		<img id = "mapLink" src = "flood.png" alt= "flood view">
+		<p id = 'tt'></p>
 	</div>
 
 	<div id = "radio">
 
-		<input type = "radio" name = "mapType" value = "flood" checked onclick = "document.getElementById('mapLink').src = 'flood.png'"> Flood<br>
+		<!-- <input type = "radio" name = "mapType" value = "flood" checked onclick = "document.getElementById('mapLink').src = 'flood.png'"
+		> Flood<br> -->
+		<input type = "radio" name = "mapType" value = "flood" checked onclick = "changeSRC(this.value)"
+		> Flood<br>
 
-		<input type = "radio" name = "mapType" value = "watershed" onclick = "document.getElementById('mapLink').src = 'watershed.png'"> Watershed<br>
+		<input type = "radio" name = "mapType" value = "watershed" onclick = "document.getElementById('mapLink').src = 'watershed.png'"
+		> Watershed<br>
 
 		<input type = "radio" name = "mapType" value = "soil" onclick = "document.getElementById('mapLink').src = 'soil.png'"> 
 		Soil<br>
@@ -74,14 +87,15 @@
 		<input type = "radio" name = "mapType" value = "treeCanopy" onclick = "document.getElementById('mapLink').src = 'treeCanopy.png'"> Tree Canopy<br>
 
 		<input type = "radio" name = "mapType" value = "slope" onclick = "document.getElementById('mapLink').src = 'slope.png'">
-		Slope<br>
-
-	</div>
-
+		Slope<br><br><br>
+		
 		<div id = "zoom">
 		Zoom <input type = "button" value = '' name = "zoomButton" >
-
+		</div>
 	</div>
+
+		
+
 
 </body>
 </html>

@@ -2,25 +2,7 @@
 <head>
 	<title> CSS MAP</title>
 
-	<style type = "text/css">
-		#map{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%, -50%);
- 			-moz-transform: translate(-50%, -50%);    /* Older Gecko browser */
-			-ms-transform: translate(-50%, -50%);     /* IE9+ */
-			-o-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-		}
-		#radio{
-
-		}
-
-		#zoom {
-			margin-top: 15px;
-		}
-	</style>	
+	<link rel = "stylesheet" href = "css/main.css" />
 
 </head>
 
@@ -58,29 +40,35 @@
 	</script>
 	
 
+	<div class = "topnav">
+		<a class = "active" href = "#home">Home</a>
+		<a href = "#placeholder">Maps</a>
+	</div>
+
 	<div id = "map"> 
 		<img id = "mapLink" src = "flood.png" alt= "flood view">
 	</div>
 
-	<div id = "radio">
+	<div class = "radio">
 
-		<input type = "radio" name = "mapType" value = "flood" checked onclick = "document.getElementById('mapLink').src = 'flood.png'"> Flood<br>
+		<input type = "radio" name = "mapType" value = "flood" checked 
+		onclick = "document.getElementById('mapLink').src = 'flood.png'"> Flood<br>
 
-		<input type = "radio" name = "mapType" value = "watershed" onclick = "document.getElementById('mapLink').src = 'watershed.png'"> Watershed<br>
+		<input type = "radio" name = "mapType" value = "watershed" 
+		onclick = "document.getElementById('mapLink').src = 'watershed.png'"> Watershed<br>
 
-		<input type = "radio" name = "mapType" value = "soil" onclick = "document.getElementById('mapLink').src = 'soil.png'"> 
-		Soil<br>
+		<input type = "radio" name = "mapType" value = "soil" 
+		onclick = "document.getElementById('mapLink').src = 'soil.png'"> Soil<br>
  
-		<input type = "radio" name = "mapType" value = "treeCanopy" onclick = "document.getElementById('mapLink').src = 'treeCanopy.png'"> Tree Canopy<br>
+		<input type = "radio" name = "mapType" value = "treeCanopy" 
+		onclick = "document.getElementById('mapLink').src = 'treeCanopy.png'"> Tree Canopy<br>
 
-		<input type = "radio" name = "mapType" value = "slope" onclick = "document.getElementById('mapLink').src = 'slope.png'">
-		Slope<br>
+		<input type = "radio" name = "mapType" value = "slope" 
+		onclick = "document.getElementById('mapLink').src = 'slope.png'">Slope<br>
 
 	</div>
-
 		<div id = "zoom">
 		Zoom <input type = "button" value = '' name = "zoomButton" >
-
 	</div>
 
 </body>
