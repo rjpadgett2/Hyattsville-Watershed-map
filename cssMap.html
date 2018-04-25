@@ -20,7 +20,7 @@
 		#zoom {
 			margin-top: 15px;
 		}
-	</style>	
+	</style>
 
 </head>
 
@@ -56,24 +56,24 @@
 			}
 		});*/
 	</script>
-	
 
-	<div id = "map"> 
+
+	<div id = "map">
 		<img id = "mapLink" src = "flood.png" alt= "flood view">
 	</div>
 
 	<div id = "radio">
 
-		<input type = "radio" name = "mapType" value = "flood" checked onclick = "document.getElementById('mapLink').src = 'flood.png'"> Flood<br>
+		<input type = "radio" id = "floodMap" name = "mapType" value = "flood" checked onclick = "infoDisplay(this.id)"> Flood<br>
 
-		<input type = "radio" name = "mapType" value = "watershed" onclick = "document.getElementById('mapLink').src = 'watershed.png'"> Watershed<br>
+		<input type = "radio" id = "watershedMap"  name = "mapType" value = "watershed" onclick = "infoDisplay(this.id)"> Watershed<br>
 
-		<input type = "radio" name = "mapType" value = "soil" onclick = "document.getElementById('mapLink').src = 'soil.png'"> 
+		<input type = "radio" id = "soilMap"  name = "mapType" value = "soil" onclick = "infoDisplay(this.id)">
 		Soil<br>
- 
-		<input type = "radio" name = "mapType" value = "treeCanopy" onclick = "document.getElementById('mapLink').src = 'treeCanopy.png'"> Tree Canopy<br>
 
-		<input type = "radio" name = "mapType" value = "slope" onclick = "document.getElementById('mapLink').src = 'slope.png'">
+		<input type = "radio" id = "treeCanopyMap"  name = "mapType" value = "treeCanopy" onclick = "infoDisplay(this.id)"> Tree Canopy<br>
+
+		<input type = "radio" id = "slopeMap"  name = "mapType" value = "slope" onclick = "infoDisplay(this.id)">
 		Slope<br>
 
 	</div>
@@ -81,7 +81,78 @@
 		<div id = "zoom">
 		Zoom <input type = "button" value = '' name = "zoomButton" >
 
+	<div id = "floodMapDetails" style="display: none;">
+			<h1>Flood Map Details</h1>
 	</div>
+
+	<div id = "watershedMapDetails" style="display: none;">
+		<h1>Watershed Map Details</h1>
+	</div>
+
+<div id = "soilMapDetails" style="display: none;">
+		<h1>Soil Map Details</h1>
+	</div>
+
+<div id = "treeCanopyMapDetails" style="display: none;">
+		<h1>Tree Canopy Map Details</h1>
+	</div>
+
+<div id = "slopeMapDetails" style="display: none;">
+		<h1>Slope Map Details</h1>
+	</div>
+
+
+<script>
+function infoDisplay(elem) {
+	if(elem == 'floodMap'){
+		document.getElementById('mapLink').src = 'flood.png';
+		var div = document.getElementById("floodMapDetails");
+		if (div.style.display === "none") {
+          div.style.display = "block";
+      } else {
+          div.style.display = "none";
+      }
+
+	}else if(elem == 'watershedMap'){
+		document.getElementById('mapLink').src = 'watershed.png';
+		var div = document.getElementById("watershedMapDetails");
+		if (div.style.display === "none") {
+          div.style.display = "block";
+      } else {
+          div.style.display = "none";
+      }
+
+	}else if(elem == 'soilMap'){
+		document.getElementById('mapLink').src = 'soil.png';
+		var div = document.getElementById("soiMapDetails");
+		if (div.style.display === "none") {
+          div.style.display = "block";
+      } else {
+          div.style.display = "none";
+      }
+
+	}else if(elem == 'treeCanopyMap'){
+		document.getElementById('mapLink').src = 'treeCanopy.png';
+		var div = document.getElementById("treeCanopyMapDetails");
+		if (div.style.display === "none") {
+          div.style.display = "block";
+      } else {
+          div.style.display = "none";
+      }
+	}else if(elem == 'slopeMap'){
+		document.getElementById('mapLink').src = 'slope.png';
+		var div = document.getElementById("slopeMapDetails");
+		if (div.style.display === "none") {
+          div.style.display = "block";
+      } else {
+          div.style.display = "none";
+      }
+
+	}
+
+}
+
+</script>
 
 </body>
 </html>
