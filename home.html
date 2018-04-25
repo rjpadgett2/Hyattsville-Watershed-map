@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title> CSS MAP</title>
+
+	<link rel = "stylesheet" href = "css/main.css" />
+
+</head>
+
+<body>
+
+
+<!-- 	<script type="text/javascript">
+
+	var zoom = document.getElementById('zoom');
+	var map = document.getElementById('map');
+
+	zoom.onclick = function(){zoomIn(target);};
+
+	function zoomIn(target){
+		console.log("zoomIn");
+		zoom.value = '-';
+		map.width = 500;
+		button.onclick = function() {zoomOut(target);};
+
+	}
+	function zoomOut(target){
+		console.log("zoomOut");
+		zoom.value = '-';
+		map.width = 100;
+		button.onclick = function() {zoomIn(target);};
+	}
+
+
+	/*	$("#zoom").on('click', function(){
+			if (document.getElementById('zoom') == '+'){
+				document.getElementById('map').width = 150%
+			}
+		});*/
+	</script> -->
+	
+
+	<div class = "topnav">
+		<a class = "active" href = "#home">Home</a>
+		<a href = "#placeholder">Maps</a>
+	</div>
+
+	<br>
+
+	<div id = "map"> 
+		<img id = "mapLink" src = "img/flood.png" alt= "Flood view">
+	</div>
+	<div id="myModal" class="modal">
+  		<span class="close">&times;</span>
+  		<img class="modal-content" id="mapImg">
+  		<div id="caption">
+  			<script type="text/javascript">document.getElementById('mapLink').alt</script>
+  		</div>
+	</div>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById('mapLink');
+		var modalImg = document.getElementById("mapImg");
+		var captionText = document.getElementById("caption");
+		img.onclick = function(){
+		    modal.style.display = "block";
+		    modalImg.src = this.src;
+		    captionText.innerHTML = this.alt;
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+		    modal.style.display = "none";
+		}
+	</script>
+
+
+	<div class = "radio">
+
+		<input type = "radio" name = "mapType" value = "flood" checked 
+		onclick = "document.getElementById('mapLink').src = 'img/flood.png'"> Flood<br>
+
+		<input type = "radio" name = "mapType" value = "watershed" 
+		onclick = "document.getElementById('mapLink').src = 'img/watershed.png'"> Watershed<br>
+
+		<input type = "radio" name = "mapType" value = "soil" 
+		onclick = "document.getElementById('mapLink').src = 'img/soil.png'"> Soil<br>
+ 
+		<input type = "radio" name = "mapType" value = "treeCanopy" 
+		onclick = "document.getElementById('mapLink').src = 'img/treeCanopy.png'"> Tree Canopy<br>
+
+		<input type = "radio" name = "mapType" value = "slope" 
+		onclick = "document.getElementById('mapLink').src = 'img/slope.png'">Slope<br>
+
+	</div>
+
+</body>
+</html>
