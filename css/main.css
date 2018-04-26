@@ -50,15 +50,15 @@ body{
 	cursor: pointer;
 }
 
-#flood, #watershed, #soil, #treecanopy, #slope{
+#flood, #watershed, #soil, #treecanopy, #slope, #surface{
 	text-align: center;
 	padding-top: 50px;
 	height: 100%;
 }
-#flood p, #watershed p, #soil p, #treecanopy p, #slope p{
+#flood p, #watershed p, #soil p, #treecanopy p, #slope p, #surface p{
 	margin-top: 75px;
 }
-#floodP, #watershedP, #soilP, #treecanopyP, #slopeP{
+#floodP, #watershedP, #soilP, #treecanopyP, #slopeP, #surfaceP{
 	float: bottom;
 	left: 50%;
 	width: 380px;
