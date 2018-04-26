@@ -13,7 +13,7 @@ body{
 	width: 100%;
 }
 #bot{
-	outline-offset: 10px;
+	margin-top: 52px;
 }
 .topnav a {
 	display: inline-block;
@@ -53,6 +53,10 @@ body{
 #flood, #watershed, #soil, #treecanopy, #slope{
 	text-align: center;
 	padding-top: 50px;
+	height: 100%;
+}
+#flood p, #watershed p, #soil p, #treecanopy p, #slope p{
+	margin-top: 75px;
 }
 #floodP, #watershedP, #soilP, #treecanopyP, #slopeP{
 	float: bottom;
@@ -64,33 +68,6 @@ body{
 	cursor: pointer;
 }
 
-#mapLink{
-	/*position: absolute;*/
-	/*top: 50%;*/
-	left: 50%;
-	width: 380px;
-	height: 280px;
-	overflow: auto;
-	-webkit-transform: translate(-50%, -50%);
-		-moz-transform: translate(-50%, -50%);    /* Older Gecko browser */
-	-ms-transform: translate(-50%, -50%);     /* IE9+ */
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-
-#mapsAndInfo img{
-	position: relative;
-	top: 50%;
-	left: 50%;
-	width: 640px;
-	height: 480px;
-	overflow: auto;
-	-webkit-transform: translate(-50%, -50%);
-		-moz-transform: translate(-50%, -50%);    /* Older Gecko browser */
-	-ms-transform: translate(-50%, -50%);     /* IE9+ */
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
 
 /*
 	Following Modal Codes gathered from W3School
