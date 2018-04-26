@@ -1,12 +1,104 @@
 <html>
 
-	<head>
-		<title>Maps</title>
-		<link rel = "stylesheet" href = "css/main.css" />
-	</head>
+<head>
+	<title>Maps</title>
+	<link rel = "stylesheet" href = "css/main.css" />
+</head>
 
-	<body>
-	
-	</body>
+<body>
+
+<!-- TOP NAVIGATION BAR-->
+
+	<div class = "topnav">
+		<a href = "home.html">Home</a>
+		<a class = "active" href = "#top">Maps</a>
+	</div>
+
+	<div class = "topnav" id = "bot">
+		<a href = "#flood">Flood</a>
+		<a href = "#watershed">Watershed</a>
+		<a href = "#soil">Soil</a>
+		<a href = "#treecanopy">Tree Canopy</a>
+		<a href = "#slope">Slope</a>
+	</div>
+
+<!-- EACH DIVIDEND SECTION FOR THE HYATTSVILLE INCLUDING TEXT AND IMAGES -->
+
+	<div id = "flood"> 
+		<p>
+			<h2>Flood View</h>
+		</p>
+		<img id = "floodP" src = "img/flood.png" alt= "Flood view" onclick="modalFunction(this.id)">
+	</div>
+
+	<div id = "watershed"> 
+		<p>
+			<h2>Watershed View</h2>
+		</p>
+		<img id = "watershedP" src = "img/watershed.png" alt= "Watershed view" onclick="modalFunction(this.id)">
+	</div>
+
+	<div id = "soil"> 
+		<p>
+			<h2>Soil View</h2>
+		</p>
+		<img id = "soilP" src = "img/soil.png" alt= "Soil view" onclick="modalFunction(this.id)">
+	</div>
+
+	<div id = "treecanopy"> 
+		<p>
+			<h2>Tree Canopy View</h2>
+		</p>
+		<img id = "treecanopyP" src = "img/treeCanopy.png" alt= "Tree Canopy view" onclick="modalFunction(this.id)">
+	</div>
+
+	<div id = "slope"> 
+		<p>
+			<h2>Slope View</h2>
+		</p>
+		<img id = "slopeP" src = "img/slope.png" alt= "Slope view" onclick="modalFunction(this.id)">
+	</div>
+
+<!-- SETTING UP MODAL THAT WILL SHOW UP WHEN CLICKED ON REPRESENTATIVE IMAGES -->
+
+
+
+<!-- JAVASCRIPT CODE TO FILL IN THE MODAL INFORMATION BASED ON THE IMAGE CLICKED -->
+
+	<script type="text/javascript">
+		function modalFunction(id){
+			//var caption = document.getElementById(id).alt;
+			var modal = document.getElementById('myModal');
+
+			var img = document.getElementById(id);
+			var modalImg = document.getElementById('mapImg');
+			var captionText = document.getElementById(id).alt;
+			//document.getElementById('caption').innerHTML = '';
+			//document.getElementById('caption').innerHTML = captionText;
+			//alert(document.getElementById('caption').innerHTML)
+			img.onclick = function(){
+				modal.style.display = "block";
+				modalImg.src = this.src;
+				//captionText.innerHTML = this.alt;
+			}
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+		    	modal.style.display = "none";
+		    }
+		}
+
+	</script>
+	<div id="myModal" class="modal">
+  		<span class="close">&times;</span>
+  		<img class="modal-content" id="mapImg">
+  		<div id="caption">
+  		</div>
+	</div>
+
+
+</body>
 
 </html>
