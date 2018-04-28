@@ -41,11 +41,20 @@ body{
 	padding-top: 50px;
 	height: 100%;
 }
-#flood p, #watershed p, #soil p, #treecanopy p, #slope p, #surface p{
+#flood h2, #watershed h2, #soil h2, #treecanopy h2, #slope h2, #surface h2{
 	margin-top: 75px;
 	padding-left: 10%;
 	padding-right: 10%;
-	margin-left: 50%;
+	font-size: 2.5em;
+	font-family: Times;
+}
+#flood p, #watershed p, #soil p, #treecanopy p, #slope p, #surface p{
+	margin-top: 50px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 5%;
+	font-size: 1.15em;
+	font-family: Helvetica;
 }
 
 p.text{
