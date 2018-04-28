@@ -1,0 +1,92 @@
+<html>
+
+<head>
+	<title>Compare Maps</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel = "stylesheet" href = "css/compare.css">
+</head>
+
+<body>
+
+	<div class = "topnav">
+		<a href = "home.html">Home</a>
+		<a href = "maps.html">Maps</a>
+		<a class = "active" href = "compare.html">Compare Maps</a>
+	</div>
+
+	<div id = "mainBody">
+		<h2>Compare two maps side by side</h2>
+		<br><br>
+		<p>
+			Choose from the options to compare two maps side by side to see how each one affects the other.
+		</p>
+		<br><br>
+
+
+		<div id = "radioButtons">
+			Flood<input type = "radio" value = "flood" name = "firstR" id = "firstRadio"
+			onclick = "document.getElementById('first').src = 'img/flood.png'">
+			<input type = "radio" value = "flood" name = "secondR" id = "secondRadio"
+			onclick = "document.getElementById('second').src = 'img/flood.png'">Flood
+
+			<br>
+			Watershed<input type = "radio" value = "watershed"   name = "firstR" id = "firstRadio"
+			onclick = "document.getElementById('first').src = 'img/watershed.png'">
+			<input type = "radio" value = "watershed" name = "secondR" id = "secondRadio"
+			onclick = "document.getElementById('second').src = 'img/watershed.png'">Watershed
+
+			<br>
+			Soil Type<input type = "radio" value = "soil" name = "firstR" id = "firstRadio"
+			onclick = "document.getElementById('first').src = 'img/soilType.png'">
+			<input type = "radio" value = "soil" name = "secondR" id = "secondRadio"
+			onclick = "document.getElementById('second').src = 'img/soilType.png'">Soil Type
+
+			<br>
+			Tree Canopy<input type = "radio" value = "treeCanopy" name = "firstR" id = "firstRadio"
+			onclick = "document.getElementById('first').src = 'img/treeCanopy.png'">
+			<input type = "radio" value = "treeCanopy" name = "secondR" id = "secondRadio"
+			onclick = "document.getElementById('second').src = 'img/treeCanopy.png'">Tree Canopy
+
+			<br>
+			Slope<input type = "radio" value = "slope" name = "firstR" id = "firstRadio"
+			onclick = "document.getElementById('first').src = 'img/slope.png'">
+			<input type = "radio" value = "slope" name = "secondR" id = "secondRadio"
+			onclick = "document.getElementById('second').src = 'img/slope.png'">Slope
+
+			<br>
+			Impervious Surface<input type = "radio" value = "slope" name = "firstR" id = "firstRadio"
+			onclick = "document.getElementById('first').src = 'img/impervSurface.png'">
+			<input type = "radio" value = "slope" name = "secondR" id = "secondRadio"
+			onclick = "document.getElementById('second').src = 'img/impervSurface.png'">Impervious Surface
+
+			<br><br><br>
+
+		</div>
+
+<!-- 		<div id = "secondRadio">
+			<input type = "radio" value = "flood" name = "secondR" 
+			onclick = "document.getElementById('second').src = 'img/flood.png'">Flood<br>
+			<input type = "radio" value = "watershed" name = "secondR"
+			onclick = "document.getElementById('second').src = 'img/watershed.png'">Watershed<br>
+			<input type = "radio" value = "soil" name = "secondR" 
+			onclick = "document.getElementById('second').src = 'img/soilType.png'">Soil Type<br>
+			<input type = "radio" value = "treeCanopy" name = "secondR" 
+			onclick = "document.getElementById('second').src = 'img/treeCanopy.png'">Tree Canopy<br>
+			<input type = "radio" value = "slope" name = "secondR" 
+			onclick = "document.getElementById('second').src = 'img/slope.png'">Slope<br>
+			<input type = "radio" value = "slope" name = "secondR" 
+			onclick = "document.getElementById('second').src = 'img/impervSurface.png'">Impervious Surface<br>
+			<br><br>
+		</div> -->
+
+		<br>
+
+		<img id = "first" src = "img/na.png" alt= "First Image">
+		<img id = "second" src = "img/na.png" alt= "Second Image">
+
+	</div>
+
+</body>
+
+</html>
