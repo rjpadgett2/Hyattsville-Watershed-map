@@ -30,7 +30,9 @@
 			Insert the analysis in place of these text. <br>
 			A new paragraph maybe but these are filler text.
 		</p>
-		<img id = "floodP" src = "img/flood.png" alt= "Flood view" onclick="modalFunction(this.id)">
+		<img src = "img/floodLegend.png" alt = "Legend for Flood image">
+		<img id = "floodP" src = "img/flood.png" alt= "Flood view" 
+		onclick="modalFunction(this.id, 'img/floodLegend.png')">
 	</div>
 
 	<div id = "watershed"> 
@@ -39,7 +41,9 @@
 			Insert the analysis in place of these text. <br>
 			A new paragraph maybe but these are filler text.
 		</p>
-		<img id = "watershedP" src = "img/watershed.png" alt= "Watershed view" onclick="modalFunction(this.id)">
+		<img src = "img/watershedL.png" alt = "Legend for Watershed image">
+		<img id = "watershedP" src = "img/watershed.png" alt= "Watershed view" 
+		onclick="modalFunction(this.id, 'img/watershedL.png')">
 	</div>
 
 	<div id = "soil"> 
@@ -47,7 +51,9 @@
 			<h2>Soil View</h2>
 			It is evident that Hyattsville has a diverse range of soil types; however, the most important ones here include flood-prone soils. These flood-prone soils are highlighted in blue. Many flood regions lie along the edge of the city limits by bodies of water such as the Northeast and Northwest Branches of the Anacostia River and University Hills Pond Park. Other flood regions are situated along areas where there is a high amount of impervious surfaces (The Mall at Prince George’s, Northwestern High School, residential areas).
 		</p>
-		<img id = "soilP" src = "img/soilType.png" alt= "Soil view" onclick="modalFunction(this.id)">
+		<img src = "img/soilL.png" alt = "Legend for soil image">
+		<img id = "soilP" src = "img/soilType.png" alt= "Soil view" 
+		onclick="modalFunction(this.id, 'img/soil.png')">
 	</div>
 
 	<div id = "treecanopy"> 
@@ -56,7 +62,9 @@
 			Insert the analysis in place of these text. <br>
 			A new paragraph maybe but these are filler text.
 		</p>
-		<img id = "treecanopyP" src = "img/treeCanopy.png" alt= "Tree Canopy view" onclick="modalFunction(this.id)">
+		<img src = "img/treeCanopyL.png" alt = "Legend for Tree Canopy image">
+		<img id = "treecanopyP" src = "img/treeCanopy.png" alt= "Tree Canopy view" 
+		onclick="modalFunction(this.id, 'img/treeCanopyL.png')">
 	</div>
 
 	<div id = "slope"> 
@@ -65,7 +73,9 @@
 			Insert the analysis in place of these text. <br>
 			A new paragraph maybe but these are filler text.
 		</p>
-		<img id = "slopeP" src = "img/slope.png" alt= "Slope view" onclick="modalFunction(this.id)">
+		<img src = "img/slopeL.png" alt = "Legend for Slope image">
+		<img id = "slopeP" src = "img/slope.png" alt= "Slope view" 
+		onclick="modalFunction(this.id, 'img/slopeL.png')">
 	</div>
 
 	<div id = "surface"> 
@@ -73,7 +83,9 @@
 			<h2>Impervious Surface View</h2>
 			Impervious surfaces of Hyattsville. The city is approximately outlined in red. The largest concentrations of impervious surfaces include mostly pavemented areas - The Mall at Prince George’s, Northwestern High School, Route 1 area and the surrounding neighborhoods and businesses, West Hyattsville residential areas and metro station.
 		</p>
-		<img id = "surfaceP" src = "img/impervSurface.png" alt= "Impervious Surface view" onclick="modalFunction(this.id)">
+		<img src = "img/surfaceL.png" alt = "Legend for Surface image">
+		<img id = "surfaceP" src = "img/impervSurface.png" alt= "Impervious Surface view" 
+		onclick="modalFunction(this.id, 'img/surfaceL.png')">
 	</div>	
 
 <!-- SETTING UP MODAL THAT WILL SHOW UP WHEN CLICKED ON REPRESENTATIVE IMAGES -->
@@ -83,24 +95,21 @@
 <!-- JAVASCRIPT CODE TO FILL IN THE MODAL INFORMATION BASED ON THE IMAGE CLICKED -->
 
 	<script type="text/javascript">
-		function modalFunction(id){
+		function modalFunction(id, legend){
 			//var caption = document.getElementById(id).alt;
 			var modal = document.getElementById('myModal');
 
 			var img = document.getElementById(id);
 			var modalImg = document.getElementById('mapImg');
+			var modalLeg = document.getElementById('mapLeg');
 			var captionText = document.getElementById(id).alt;
-			//document.getElementById('caption').innerHTML = '';
-			//document.getElementById('caption').innerHTML = captionText;
-			//alert(document.getElementById('caption').innerHTML)
 			img.onclick = function(){
 				modal.style.display = "block";
 				modalImg.src = this.src;
-				//captionText.innerHTML = this.alt;
+				modalLeg.src = legend;
 			}
 			// Get the <span> element that closes the modal
 			var span = document.getElementsByClassName("close")[0];
-
 			// When the user clicks on <span> (x), close the modal
 			span.onclick = function() { 
 		    	modal.style.display = "none";
@@ -108,10 +117,11 @@
 		}
 
 	</script>
+	
 	<div id="myModal" class="modal">
   		<span class="close">&times;</span>
   		<img class="modal-content" id="mapImg">
-  		<div id="caption">
+  		<img class ="modal-Legend" id="mapLeg">
   		</div>
 	</div>
 
