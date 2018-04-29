@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title>Maps</title>
+	<title>Hyattsville Watershed Viz</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel = "stylesheet" href = "css/main.css" />
@@ -9,22 +9,63 @@
 
 <body>
 
+<!-- TOP BANNER -->
+
+	<section id = "banner">
+		<h1>
+			MAPS
+		</h1>
+	</section>
+
 <!-- TOP NAVIGATION BAR-->
 
-	<div class = "topnav">
+	<div id = "topnav2">
 		<a href = "home.html">Home</a>
 		<a class = "active" href = "#top">Maps</a>
 		<a href = "compare.html">Compare Maps</a>
+		<a href = "about.html">About</a>
 	</div>
 
-	<div class = "topnav" id = "bot">
+	<div id = "topnav" >
 		<a href = "#flood">Flood</a>
 		<a href = "#watershed">Watershed</a>
 		<a href = "#soil">Soil</a>
 		<a href = "#treecanopy">Tree Canopy</a>
 		<a href = "#slope">Slope</a>
 		<a href = "#surface">Surface</a>
-	</div>
+	</div> 
+
+<!-- Javascript for sticky navbar, based on W3School Tutorial -->
+
+	<script type="text/javascript">
+		// When the user scrolls the page, execute myFunction 
+		window.onscroll = function() {myFunction()};
+		// Get the navbar
+		var navbar = document.getElementById("topnav");
+		// Get the offset position of the navbar
+		var sticky = navbar.offsetTop;
+		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+		    navbar.classList.add("sticky")
+		  } else {
+		    navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+
+<!-- INITIAL LOAD PAGE FILLER -->
+
+	<section id = "intro">
+		<div>
+			<p>
+				Navigate through the few maps<br> and analysis on City of Hyattsville
+			</p>
+			<img src = "img/gov.svg" alt = "Icon of a building">
+
+		</div>
+	</section>
+
 
 <!-- EACH DIVIDEND SECTION FOR THE HYATTSVILLE INCLUDING TEXT AND IMAGES -->
 
@@ -103,12 +144,12 @@
 
 			var img = document.getElementById(id);
 			var modalImg = document.getElementById('mapImg');
-			var modalLeg = document.getElementById('mapLeg');
+			// var modalLeg = document.getElementById('mapLeg');
 			var captionText = document.getElementById(id).alt;
 			img.onclick = function(){
 				modal.style.display = "block";
 				modalImg.src = this.src;
-				modalLeg.src = legend;
+				// modalLeg.src = legend;
 			}
 			// Get the <span> element that closes the modal
 			var span = document.getElementsByClassName("close")[0];
@@ -123,8 +164,8 @@
 	<div id="myModal" class="modal">
   		<span class="close">&times;</span>
   		<img class="modal-content" id="mapImg">
-  		<img class ="modal-Legend" id="mapLeg">
-  		</div>
+<!--   		<img class ="modal-Legend" id="mapLeg">
+ -->  		</div>
 	</div>
 
 
