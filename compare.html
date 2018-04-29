@@ -4,16 +4,64 @@
 	<title>Hyattsville Watershed Analytic Viz</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel = "stylesheet" href = "css/compare.css">
+	<link rel = "stylesheet" href = "css/main.css">
 </head>
 
 <body>
 
-	<div class = "topnav">
+<!-- TOP BANNER -->
+
+	<section id = "banner">
+		<h1>
+			COMPARE
+		</h1>
+	</section>
+
+<!-- TOP NAVIGATION BAR-->
+
+	<div id = "topnav">
 		<a href = "home.html">Home</a>
 		<a href = "maps.html">Maps</a>
-		<a class = "active" href = "compare.html">Compare Maps</a>
+		<a class = "active" href = #banner>Compare Maps</a>
+		<a href = "about.html">About</a>
 	</div>
+
+	<div id = "topnav2">
+		<a href = #mainBody>Go</a>
+	</div>
+
+<!-- Javascript for sticky navbar, based on W3School Tutorial -->
+
+	<script type="text/javascript">
+		// When the user scrolls the page, execute myFunction 
+		window.onscroll = function() {myFunction()};
+		// Get the navbar
+		var navbar = document.getElementById("topnav");
+		// Get the offset position of the navbar
+		var sticky = navbar.offsetTop;
+		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+		    navbar.classList.add("sticky")
+		  } else {
+		    navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+
+<!-- INITIAL LOAD PAGE FILLER -->
+
+	<section id = "intro">
+		<div>
+			<p>
+				Side by Side comparison<br>
+				for better comprehension
+			</p>
+			<img src = "img/compare.svg" alt = "Icon of a building">
+			
+		</div>
+	</section>
+
 
 	<div id = "mainBody">
 		<h2>Compare two maps side by side</h2>
@@ -24,66 +72,50 @@
 
 
 		<div id = "radioButtons">
-			Flood<input type = "radio" value = "flood" name = "firstR" id = "firstRadio"
+			Flood &nbsp &nbsp <input type = "radio" value = "flood" name = "firstR" id = "firstRadio"
 			onclick = "document.getElementById('first').src = 'img/flood.png'">
 			<input type = "radio" value = "flood" name = "secondR" id = "secondRadio"
-			onclick = "document.getElementById('second').src = 'img/flood.png'">Flood
+			onclick = "document.getElementById('second').src = 'img/flood.png'"> &nbsp &nbsp Flood
 
 			<br>
-			Watershed<input type = "radio" value = "watershed"   name = "firstR" id = "firstRadio"
+			Watershed &nbsp &nbsp <input type = "radio" value = "watershed"   name = "firstR" id = "firstRadio"
 			onclick = "document.getElementById('first').src = 'img/watershed.png'">
 			<input type = "radio" value = "watershed" name = "secondR" id = "secondRadio"
-			onclick = "document.getElementById('second').src = 'img/watershed.png'">Watershed
+			onclick = "document.getElementById('second').src = 'img/watershed.png'"> &nbsp &nbsp Watershed
 
 			<br>
-			Soil Type<input type = "radio" value = "soil" name = "firstR" id = "firstRadio"
+			Soil Type &nbsp &nbsp <input type = "radio" value = "soil" name = "firstR" id = "firstRadio"
 			onclick = "document.getElementById('first').src = 'img/soilType.png'">
 			<input type = "radio" value = "soil" name = "secondR" id = "secondRadio"
-			onclick = "document.getElementById('second').src = 'img/soilType.png'">Soil Type
+			onclick = "document.getElementById('second').src = 'img/soilType.png'"> &nbsp &nbsp Soil Type
 
 			<br>
-			Tree Canopy<input type = "radio" value = "treeCanopy" name = "firstR" id = "firstRadio"
+			Tree Canopy &nbsp &nbsp <input type = "radio" value = "treeCanopy" name = "firstR" id = "firstRadio"
 			onclick = "document.getElementById('first').src = 'img/treeCanopy.png'">
 			<input type = "radio" value = "treeCanopy" name = "secondR" id = "secondRadio"
-			onclick = "document.getElementById('second').src = 'img/treeCanopy.png'">Tree Canopy
+			onclick = "document.getElementById('second').src = 'img/treeCanopy.png'"> &nbsp &nbsp Tree Canopy
 
 			<br>
-			Slope<input type = "radio" value = "slope" name = "firstR" id = "firstRadio"
+			Slope &nbsp &nbsp <input type = "radio" value = "slope" name = "firstR" id = "firstRadio"
 			onclick = "document.getElementById('first').src = 'img/slope.png'">
 			<input type = "radio" value = "slope" name = "secondR" id = "secondRadio"
-			onclick = "document.getElementById('second').src = 'img/slope.png'">Slope
+			onclick = "document.getElementById('second').src = 'img/slope.png'"> &nbsp &nbsp Slope
 
 			<br>
-			Impervious Surface<input type = "radio" value = "slope" name = "firstR" id = "firstRadio"
+			Impervious Surface &nbsp &nbsp <input type = "radio" value = "slope" name = "firstR" id = "firstRadio"
 			onclick = "document.getElementById('first').src = 'img/impervSurface.png'">
 			<input type = "radio" value = "slope" name = "secondR" id = "secondRadio"
-			onclick = "document.getElementById('second').src = 'img/impervSurface.png'">Impervious Surface
+			onclick = "document.getElementById('second').src = 'img/impervSurface.png'"> &nbsp &nbsp Impervious Surface
 
 			<br><br><br>
 
 		</div>
 
-<!-- 		<div id = "secondRadio">
-			<input type = "radio" value = "flood" name = "secondR" 
-			onclick = "document.getElementById('second').src = 'img/flood.png'">Flood<br>
-			<input type = "radio" value = "watershed" name = "secondR"
-			onclick = "document.getElementById('second').src = 'img/watershed.png'">Watershed<br>
-			<input type = "radio" value = "soil" name = "secondR" 
-			onclick = "document.getElementById('second').src = 'img/soilType.png'">Soil Type<br>
-			<input type = "radio" value = "treeCanopy" name = "secondR" 
-			onclick = "document.getElementById('second').src = 'img/treeCanopy.png'">Tree Canopy<br>
-			<input type = "radio" value = "slope" name = "secondR" 
-			onclick = "document.getElementById('second').src = 'img/slope.png'">Slope<br>
-			<input type = "radio" value = "slope" name = "secondR" 
-			onclick = "document.getElementById('second').src = 'img/impervSurface.png'">Impervious Surface<br>
-			<br><br>
-		</div> -->
-
 		<br>
-
-		<img id = "first" src = "img/na.png" alt= "First Image">
-		<img id = "second" src = "img/na.png" alt= "Second Image">
-
+		<div id = "images">
+			<img id = "first" src = "img/na.png" alt= "First Image">
+			<img id = "second" src = "img/na.png" alt= "Second Image">
+		</div>
 	</div>
 
 </body>
