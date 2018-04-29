@@ -58,6 +58,11 @@ h1{
     padding-top: 5%;
 }
 
+hr{
+    width: 80%;
+    size: "5";
+}
+
 /* Style the navbar */
 #topnav, #topnav2 {
     overflow: hidden;
@@ -87,11 +92,13 @@ h1{
 #topnav a:hover, #topnav2 a:hover {
     background-color: #ddd;
     color:black;
+    border-radius: 20px;
 }
 
 #topnav a.active, #topnav2 a.active {
     background-color: #4CAF50;
     color: white;
+    border-radius: 20px;
 }
 
 /* Page content */
@@ -202,7 +209,7 @@ p.text{
     overflow: auto;
     margin: auto;
     display: block;
-    width: 100%;
+    width: 90%;
     max-width: 900px;
 }
 /*.modal-Legend {
@@ -292,16 +299,20 @@ p.text{
 }
 
 #first{
-    float: left;
+/*    float: left;
     margin-left: 5%;
-}
+*/}
 #second{
-    float: right;
+/*    float: right;
     margin-right: 5%;
-}
+*/}
 #first, #second{
     width: 500px;
     height: 360px;
     border-radius: 10px;
     border: 3px solid #2B2D2D;
 }
+#first:hover, #second:hover{
+    zoom: 120%;
+}
+
