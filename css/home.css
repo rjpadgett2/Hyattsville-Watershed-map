@@ -1,6 +1,6 @@
 html{
-	background-image: url("../img/waterB.jpg");
-	background-position: center;
+/*	background-image: url("../img/waterB.jpg");
+*/	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
@@ -62,16 +62,17 @@ html{
 	font-size: 20px;
 	text-decoration: none;
 	font-family: helvetica;
+	border-radius: 15px;
 }
 .button:hover{
 	cursor: pointer;
-	opacity: 0.7;
+	opacity: 1;
 	background-color: #81C1C1;
 	text-shadow: 2px 2px 2px #91DEDE;
+	border-radius: 15px;
 }
 
-h1{
-	padding-top: 15%;
+#homeMainContent h1{
 	text-align: center;
 	vertical-align: middle;
 	font-family: Helvetica;
@@ -81,4 +82,91 @@ h1{
 	color: white;
 	text-shadow: 2px 3px 3px black;
 }
+
+#about h1{
+	width: 100%;
+	padding-top: 5%;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 4.5em;
+	letter-spacing: 5px;
+	line-height: 90px;
+	color: white;
+	text-shadow: 2px 3px 3px black;
+}
+
+#right{
+	text-align: left;
+}
+/*
+right{
+	margin-left: 60%;
+}
+*/
+body{
+	
+}
+.table{
+	border-spacing: 20px;
+	display: table;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+.table-row{
+	background-image: url("../img/bg.png");
+	opacity: 0.9;
+	margin-left: 50px;
+	display: table-row;
+}
+.table-cell{
+	opacity: 1.0;
+	white-space: 10px;
+	display:table-cell;
+	padding: 80px;
+	width: 50%;
+	color: #414646;
+	border: 2px solid white;
+	font-size: 20px;
+	text-decoration: none;
+	font-family: helvetica;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+.table-cell p, .table-cell li{
+	opacity: 1.0;
+}
+
+#about #buttons{
+	margin-top: 0;
+	padding-top: 10%;
+}
+
+.parallax{
+	background-image: url("../img/waterB.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+#more{
+	margin-top: 90%;
+	padding: 20px;
+	background-color: white;
+	border-radius: 30px;
+	margin-left: 47.5%;
+	font-family: helvetica;
+	text-align: center;
+	text-decoration: none;
+	color: #ccc;
+	opacity: 0.5;
+}
+#more:hover{
+	color: white;
+	background-color: #ccc;
+	opacity: 1.0;
+}
+
 
